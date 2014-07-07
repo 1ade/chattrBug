@@ -1,0 +1,61 @@
+
+<!-- Example row of columns -->
+<div class="row">
+	<table class="table table-bordered">
+		<tr>
+			<td class="col-md-4">
+				<div class="panel-content" >
+					<ul class="list-group" id="chatters" >
+						<li href="#" id="status" class="list-group-item disabled alert alert-success hide">
+						</li>
+					</ul>
+				</div>	<!-- members div-->		
+			</td><!-- members td-->
+			<td class="col-md-8">
+				<div class="panel-content">
+					<ul class="list-group " id="messages">
+					</ul>
+				</div>	<!-- messages div-->					
+			</td><!-- messages-->		
+		<tr>
+		<tr>
+			<td colspan="2" style="padding: 0;border: none;">
+				<div class="col-md-12"  style="padding: 0;height: 46px;">
+					<form role="form" id="chat_form" >
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control input-lg" id="chat_input" placeholder="Type a msg" style="border-radius: 0;">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary input-lg btn-lg"  style="border-radius: 0;">Submit</button>
+								</span>
+							</div>
+						</div>  
+					</form>
+				</div><!-- form div-->			
+			</td><!-- form-->
+		<tr>
+	</table>
+</div><!-- members panel-->
+<!-- MODAL -->
+<div id="nickNameModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+          <!--button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button-->
+          <h4 id="mySmallModalLabel" class="modal-title">Login</h4>
+      </div>
+			<div class="modal-body">
+         <form role="form" id="nickName_form" >
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" id="nickName_input" placeholder="Type your nick name" style="border-radius: 0;">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-success"  style="border-radius: 0;">Submit</button>
+								</span>
+							</div>
+						</div>  
+					</form>
+      </div>
+    </div>
+  </div>
+</div>

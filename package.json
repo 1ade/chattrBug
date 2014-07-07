@@ -1,0 +1,14 @@
+{
+  "name": "chatrrBug",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^3.3.5",
+    "redis": "^0.10.3",
+    "socket.io": "^1.0.6"
+  }
+}

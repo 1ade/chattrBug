@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.panel-content{
+    max-height: 400px;
+		height: 400px;
+    overflow-y:auto; 
+}
+.list-group-item {
+	/*border-left: none !important;
+	border-right: none !important;*/
+}
