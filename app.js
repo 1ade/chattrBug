@@ -40,9 +40,6 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
-
 var about = require('./routes/about');
 app.get('/about', about.about);
 
@@ -53,14 +50,11 @@ var server = http.createServer(app).listen(app.get('port'), function () {
 
 /*
 =================
-	socket.io ish
+socket.io ish
 =================
 */
 var socket = require('socket.io');
 var io = socket.listen(server);
-
-
-//var handshakeData;
 var callCounter = 0;
 var storeMessage = function (name, data) {
     var message = JSON.stringify({
@@ -131,10 +125,8 @@ io.on('connection', function (client) {
     /*================================================== **/
 
     client.on("messages", function (data) {
-
-				io.emit("messages", data);
-				storeMessage(data.name,data.message);        
-
+	io.emit("messages", data);
+	storeMessage(data.name,data.message);        
     });
 
 });
