@@ -2,9 +2,6 @@
  * Module dependencies.
  */
 //install redis
-
-//var redis = require('redis');
-//var redisClient = redis.createClient();
 var redis ;
 var redisClient ;
 
@@ -34,7 +31,6 @@ app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
-//app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -115,7 +111,6 @@ io.on('connection', function (client) {
                 var msg = JSON.parse(message);
 								console.log(msg);
                 client.emit("messages", msg);
-								//client.emit("messages", msg.name + " :" + msg.data);
             });
         });
         /*================================================== **/
